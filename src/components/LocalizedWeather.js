@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
+
+import { styles } from '../../styles/styles'
 
 export default function LocalizedWeather() {
   return (
-    <View>
-      <Text>Localized Weather</Text>
+    <View style={styles.localizedWeatherContainer}>
+      <Text style={{ color: "#fff" }}>Localized Weather</Text>
     </View>
   )
 }
-
-const styles = StyleSheet.create({})
