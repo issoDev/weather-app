@@ -1,11 +1,12 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React, { useState, useEffect } from 'react'
+import meteo from '../api/meteo';
 
-export default function UseMeteo() {
-  return (
-    <View>
-      <Text></Text>
-    </View>
-  )
+export default () => {
+  // states
+  const [result, setResult] = useState(null);
+
+  // functions
+  
+  return;
 }
 
