@@ -16,7 +16,7 @@ export default function SearchField({ searchText, setSearchText }) {
         autoCorrect={false}
         onEndEditing={() => console.log("submitted")}
         style={styles.searchInputStyle}
-        placeholder="search city's weather forecast"
+        placeholder="search city's weather"
         value={searchText}
         onChangeText={text => setSearchText(text)}
       />
