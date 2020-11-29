@@ -1,12 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
+
+import { styles } from '../../styles/styles'
 
 export default function FindWeather() {
   return (
-    <View>
+    <View style={styles.findWeatherContainer}>
       <Text>Find Weather</Text>
     </View>
   )
 }
 
-const styles = StyleSheet.create({})

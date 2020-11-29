@@ -42,7 +42,14 @@ export const styles = StyleSheet.create({
   searchInputStyle: {
     flex: 1,
     height: 30,
-    fontSize: 18,
+    fontSize: 18
+  },
+
+  // FindWeather.js StyleSheet
+  findWeatherContainer: {
+    marginHorizontal: 25,
+    marginTop: 35,
+    padding: 20,
   }
 
 });
