@@ -4,7 +4,7 @@ import { Feather } from '@expo/vector-icons'
 
 import { styles } from '../../styles/styles'
 
-export default function SearchField() {
+export default function SearchField({ searchText, setSearchText }) {
   return (
     <View style={styles.searchBackground}>
       <Feather 
@@ -16,7 +16,9 @@ export default function SearchField() {
         autoCorrect={false}
         onEndEditing={() => console.log("submitted")}
         style={styles.searchInputStyle}
-        placeholder="chercher la météo d'une ville ..."
+        placeholder="search city's weather forecast"
+        value={searchText}
+        onChangeText={text => setSearchText(text)}
       />
     </View>
   )
