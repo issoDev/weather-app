@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: colors.black,
-    height: '40%',
+    height: '45%',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     // position: "relative"
@@ -48,8 +48,11 @@ export const styles = StyleSheet.create({
   // FindWeather.js StyleSheet
   findWeatherContainer: {
     marginHorizontal: 25,
-    marginTop: 35,
     padding: 20,
+  },
+  infoTextStyle: {
+    fontSize: 17,
+    textAlign: "center"
   },
 
   // WeatherCard.js StyleSheet
