@@ -3,10 +3,10 @@ import { Text, View } from 'react-native'
 
 import { styles } from '../../styles/styles'
 
-export default function FindWeather() {
+export default function FindWeather({ result }) {
   return (
     <View style={styles.findWeatherContainer}>
-      <Text>Find Weather</Text>
+      <Text>{result.city}</Text>
     </View>
   )
 }

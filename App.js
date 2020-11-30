@@ -14,15 +14,30 @@ export default function App() {
   const [errorMessage, setErrorMessage] = useState('');
  
   // functions
-  const fetchWeatherApi = async () => {
-    const response = await meteo.get('/paris');
-    setResult(response.data);
-  };
-  useEffect(() => {
-    fetchWeatherApi();
-  }, []);
-
-  console.log(result);
+  try {
+    const fetchWeatherApi = async () => {
+      const response = await meteo.get('/paris');
+      const weatherData = {
+        city: response.data.city_info.name,
+        date: response.data.current_condition.date,
+        icon: response.data.current_condition.icon_big,
+        temperature: response.data.current_condition.tmp,
+        condition: response.data.current_condition.condtion
+      }
+      setResult(weatherData);
+      console.log(weatherData);
+    };
+    useEffect(() => {
+      fetchWeatherApi();
+    }, []);
+  } catch(err) {
+      console.log(err);
+      setErrorMessage('connection problem');
+  }
+  
+  if (!result) {
+    return null;
+  }
 
   return (
     <SafeAreaView style={styles.appContainer}>
@@ -31,7 +46,7 @@ export default function App() {
         searchText={searchText} 
         setSearchText={setSearchText}
       />
-      <FindWeather />
+      <FindWeather result={result} />
     </SafeAreaView>
   );
 }
