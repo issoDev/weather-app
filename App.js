@@ -22,7 +22,7 @@ export default function App() {
         date: response.data.current_condition.date,
         icon: response.data.current_condition.icon_big,
         temperature: response.data.current_condition.tmp,
-        condition: response.data.current_condition.condtion
+        condition: response.data.current_condition.condition
       }
       setResult(weatherData);
       console.log(weatherData);

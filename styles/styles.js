@@ -50,6 +50,44 @@ export const styles = StyleSheet.create({
     marginHorizontal: 25,
     marginTop: 35,
     padding: 20,
-  }
+  },
 
+  // WeatherCard.js StyleSheet
+  weatherCardContainer: {
+    width: '100%',
+    alignItems: 'center',
+    padding: 20,
+    // borderWidth: 2,
+    // borderBottomColor: 'black'
+  },
+  cityName: {
+    fontSize: 28,
+    fontWeight: "800"
+  },
+  currentDate: {
+    color: colors.grey,
+    paddingTop: 5,
+    fontSize: 17.5
+  },
+  tmpContainer: {
+    flexDirection: "row",
+    marginVertical: 5,
+    width: '100%',
+    justifyContent: 'center'
+  },
+  imageStyle: {
+    height: 100, 
+    width: 100 
+  },
+  temperature: {
+    fontSize: 55
+  },
+  tmpSymbol: {
+    fontSize: 40,
+    position: "absolute",
+    top: 6
+  },
+  condition: {
+    fontSize: 18
+  }
 });

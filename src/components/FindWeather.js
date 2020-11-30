@@ -1,12 +1,13 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 
 import { styles } from '../../styles/styles'
+import WeatherCard from './WeatherCard'
 
 export default function FindWeather({ result }) {
   return (
     <View style={styles.findWeatherContainer}>
-      <Text>{result.city}</Text>
+      <WeatherCard result={result} />
     </View>
   )
 }
