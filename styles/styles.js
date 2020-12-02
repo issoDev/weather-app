@@ -1,5 +1,5 @@
 import { StyleSheet, Platform, StatusBar } from 'react-native'
-import colors from './color'
+import colors from './colors'
 
 export const styles = StyleSheet.create({
   // App.js StyleSheet
@@ -53,6 +53,12 @@ export const styles = StyleSheet.create({
   infoTextStyle: {
     fontSize: 17,
     textAlign: "center"
+  },
+  warningTextStyle: {
+    fontSize: 17,
+    textAlign: "center",
+    paddingTop: 25,
+    color: colors.lightred
   },
 
   // WeatherCard.js StyleSheet
