@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { SafeAreaView, Text } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { SafeAreaView } from 'react-native';
 
 import { styles } from './styles/styles';
 import meteo from './src/api/meteo';
@@ -24,6 +24,9 @@ export default function App() {
     }
     setResult(weatherData);
   }
+  useEffect(() => {
+    fetchWeatherApi;
+  }, []);
 
   return (
     <SafeAreaView style={styles.appContainer}>

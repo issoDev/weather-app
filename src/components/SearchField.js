@@ -5,10 +5,9 @@ import { Feather } from '@expo/vector-icons'
 import { styles } from '../../styles/styles'
 
 export default function SearchField({ searchText, setSearchText, fetchWeatherApi }) {
-  // 
   const weatherData = () => {
     fetchWeatherApi();
-    setSearchText('')
+    setSearchText('');
   }
 
   return (
