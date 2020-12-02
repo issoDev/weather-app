@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
   searchInputStyle: {
     flex: 1,
     height: 30,
-    fontSize: 18
+    fontSize: 16
   },
 
   // FindWeather.js StyleSheet
