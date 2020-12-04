@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native';
 
 import { styles } from './styles/styles';
@@ -14,19 +14,21 @@ export default function App() {
  
   // functions
   const fetchWeatherApi = async () => {
-    const response = await meteo.get(`/${searchText}`);
-    const weatherData = {
-      city: response.data.city_info.name,
-      date: response.data.current_condition.date,
-      icon: response.data.current_condition.icon_big,
-      temperature: response.data.current_condition.tmp,
-      condition: response.data.current_condition.condition
+    try {
+      const response = await meteo.get(`/${searchText}`);
+      const weatherData = {
+        city: response.data.city_info.name,
+        date: response.data.current_condition.date,
+        icon: response.data.current_condition.icon_big,
+        temperature: response.data.current_condition.tmp,
+        condition: response.data.current_condition.condition
+      }
+      setResult(weatherData);
+    } catch (error) {
+        console.log(error);
     }
-    setResult(weatherData);
+    
   }
-  useEffect(() => {
-    fetchWeatherApi;
-  }, []);
 
   return (
     <SafeAreaView style={styles.appContainer}>

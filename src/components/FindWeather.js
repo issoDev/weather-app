@@ -10,7 +10,13 @@ export default function FindWeather({ result }) {
       {
         result === null 
           ? <Text style={styles.infoTextStyle}> Add a city in the search bar above </Text>
-          : <WeatherCard result={result} />
+          : <WeatherCard 
+              city={result.city} 
+              date={result.date} 
+              icon={result.icon} 
+              temperature={result.temperature} 
+              condition={result.condition}
+            />
       }
     </View>
   )
