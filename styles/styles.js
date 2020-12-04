@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: colors.lightorange,
-    height: '45%',
+    height: '50%',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },
@@ -53,20 +53,13 @@ export const styles = StyleSheet.create({
     fontSize: 17,
     textAlign: "center"
   },
-  warningTextStyle: {
-    fontSize: 17,
-    textAlign: "center",
-    paddingTop: 25,
-    color: colors.lightred
-  },
 
   // WeatherCard.js StyleSheet
   weatherCardContainer: {
     width: '100%',
     alignItems: 'center',
     padding: 20,
-    // borderWidth: 2,
-    // borderBottomColor: 'black'
+    marginTop: 10
   },
   cityName: {
     fontSize: 28,
