@@ -12,11 +12,10 @@ export const styles = StyleSheet.create({
   localizedWeatherContainer: {
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: colors.black,
+    backgroundColor: colors.lightorange,
     height: '45%',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
-    // position: "relative"
   },
 
   // SearchField.js StyleSheet
@@ -82,7 +81,8 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     marginVertical: 5,
     width: '100%',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    textAlign: 'center'
   },
   imageStyle: {
     height: 100, 
@@ -97,6 +97,7 @@ export const styles = StyleSheet.create({
     top: 6
   },
   condition: {
-    fontSize: 18
+    fontSize: 18.5,
+    fontWeight: '500'
   }
 });
