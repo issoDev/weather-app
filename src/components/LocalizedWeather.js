@@ -10,7 +10,7 @@ import WeatherCard from './WeatherCard';
 export default function LocalizedWeather() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
-  const [unitsSysytem, setunitsSysytem] = useState('metric')
+  const [unitsSysytem, setunitsSysytem] = useState('metric');
 
 
   useEffect(() => {
