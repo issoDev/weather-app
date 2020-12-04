@@ -79,7 +79,6 @@ export const styles = StyleSheet.create({
   },
   tmpContainer: {
     flexDirection: "row",
-    marginVertical: 5,
     width: '100%',
     justifyContent: 'center',
     textAlign: 'center'
