@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native';
 
 import { styles } from './styles/styles';
-import meteo from './src/api/meteo';
 import LocalizedWeather from './src/components/LocalizedWeather';
 import SearchField from './src/components/SearchField';
 import FindWeather from './src/components/FindWeather';
