@@ -21,7 +21,7 @@ export default function SearchField({ searchText, setSearchText, fetchWeatherApi
         autoCorrect={false}
         onEndEditing={weatherData}
         style={styles.searchInputStyle}
-        placeholder="search french city's weather"
+        placeholder="search city's weather"
         value={searchText}
         onChangeText={text => setSearchText(text)}
       />
