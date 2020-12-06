@@ -9,12 +9,10 @@ import SearchField from './src/components/SearchField';
 import FindWeather from './src/components/FindWeather';
 
 export default function App() {
-  // states
   const [searchText, setSearchText] = useState('');
   const [result, setResult] = useState(null);
-  const [unitsSysytem, setunitsSysytem] = useState('metric');
+  const [unitsSysytem, setunitsSysytem] = useState('metric')
  
-  // functions
   const fetchWeatherApi = async () => {
     try {
       const response = await weather.get(`/weather?q=${searchText}&units=${unitsSysytem}&appid=${WEATHER_API_KEY}`);
@@ -22,7 +20,6 @@ export default function App() {
     } catch (error) {
         console.log(error);
     }
-    
   }
 
   return (

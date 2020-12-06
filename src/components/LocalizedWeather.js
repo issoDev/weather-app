@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Text, View } from 'react-native';
 import * as Location from 'expo-location';
+import { Feather } from '@expo/vector-icons'; 
 
 import weather from '../api/weather';
 import { WEATHER_API_KEY } from '../api/apikey'
@@ -25,38 +26,31 @@ export default function LocalizedWeather() {
       // Api call
       const response = await weather.get(`/weather?lat=${latitude}&lon=${longitude}&units=${unitsSysytem}&appid=${WEATHER_API_KEY}`);
       setCurrentWeather(response.data);
-      
     })();
   }, []);
-
-  const date = () => {
-    const currentDate = new Date();
-    return (`${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`);
-  }
-
-  console.log(currentWeather);
 
   const displayWeatherData = () => {
     if(currentWeather) {
       const iconURL = `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`
       return(
         <WeatherCard 
-          city={currentWeather.name} 
-          date={date()} 
+          city={currentWeather.name}
           icon={iconURL} 
           temperature={parseInt(currentWeather.main.temp)} 
           condition={currentWeather.weather[0].description}
         />
       )
+    } else if(currentWeather === null) {
+        return <Text style={styles.noLocationText}> Cannot find the weather forecast for your location </Text>;
     } else {
-      return <Text> { errorMsg } </Text>;
+        return <Text> { errorMsg } </Text>;
     }
   }
   
- 
   return (
     <View style={styles.localizedWeatherContainer}>
-      <Text> { displayWeatherData() } </Text>
+      <Feather name="map-pin" size={24} color="black" />
+      { displayWeatherData() } 
     </View>
   )
 }

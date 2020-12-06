@@ -17,6 +17,9 @@ export const styles = StyleSheet.create({
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },
+  noLocationText: {
+    paddingTop: 30
+  },
 
   // SearchField.js StyleSheet
   searchBackground: {
@@ -47,11 +50,15 @@ export const styles = StyleSheet.create({
   // FindWeather.js StyleSheet
   findWeatherContainer: {
     marginHorizontal: 25,
-    padding: 20,
+    padding: 20
   },
   infoTextStyle: {
     fontSize: 17,
     textAlign: "center"
+  },
+  searchLocationIcon: {
+    textAlign: "center",
+    paddingTop: 15
   },
 
   // WeatherCard.js StyleSheet
@@ -59,11 +66,15 @@ export const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     padding: 20,
-    marginTop: 10
+  },
+  iconStyle: {
+    alignSelf: "center",
+    fontSize: 25
   },
   cityName: {
     fontSize: 28,
-    fontWeight: "800"
+    fontWeight: "800",
+    position: "relative"
   },
   currentDate: {
     color: colors.grey,
