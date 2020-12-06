@@ -53,8 +53,8 @@ export const styles = StyleSheet.create({
     padding: 20
   },
   infoTextStyle: {
-    fontSize: 17,
-    textAlign: "center"
+    textAlign: "center",
+    paddingTop: 10
   },
   searchLocationIcon: {
     textAlign: "center",
